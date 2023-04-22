@@ -45,7 +45,7 @@ include 'functions.php';
                     ?>
                 </div>
 
-                
+
 
 
                 <div class="container">
@@ -61,24 +61,25 @@ include 'functions.php';
 
                 <div class="container">
 
-                <div class="user-info">
-                    <?php
-                    if (isset($_SESSION['authorized']) && getCurrentUser() !== null) {
-                        echo '<h2 class = "introduction_user">Здравствуйте,' . ' ' . getCurrentUser() . '!</h2>';
-                        if ($_SESSION['checkDayBirth'] > 0) {
-                            echo '
+                    <div class="user-info">
+                        <?php
+                        if (isset($_SESSION['authorized']) && getCurrentUser() !== null) {
+                            echo '<h2 class = "introduction_user">Здравствуйте,' . ' ' . getCurrentUser() . '!</h2>';
+                            if ($_SESSION['checkDayBirth'] > 0) {
+                                echo '
                 <div class = "introduction_day_brth">
                 <p>До вашего дня рождения осталось:' . ' ' . $_SESSION['checkDayBirth'] . ' ' . 'дней (-ень)</p>
                 </div>';
-                        } else if ($_SESSION['checkDayBirth'] === 0) {
-                            echo '
+                            } else if ($_SESSION['checkDayBirth'] === 0) {
+                                echo '
                 <div class = "introduction_day_brth">
                 <p> Поздравляем Вас с Днем Рождения! В честь этого мы подготовили для вас специальную акцию!</p>
                 </div>';
+                            }
                         }
-                    };
-                    ?>
-                </div>
+                        ;
+                        ?>
+                    </div>
 
                     <div class="gallery">
                         <!-- Left side -->
@@ -178,15 +179,21 @@ include 'functions.php';
                     </section>
                     <footer>
 
-        <ul class="menu-contacts">
-            <li class="list-items"><a class="menu-contacts-items" href="#"><img src="Logo/gps.png" alt=""> <span>Адрес: Россия, г.Москва.</span> </a></li>
-            <li class="list-items"><a class="menu-contacts-items" href="#"><img src="Logo/call.png" alt=""> Телефон: +7-999-999-99-99</a></li>
-            <li class="list-items"><a class="menu-contacts-items" href="#"><img src="Logo/mail.png" alt="">Почта: spa_salon@mail.ru</a></li>
-            <li class="list-items"><a class="menu-contacts-items" href="#"><img src="Logo/instagram.png" alt="">Instagram: @spa_salon </a></li>
-            <li class="list-items"><a class="menu-contacts-items" href="#"><img src="Logo/openingHours.png" alt="">Часы работы: ежедневно с 8:00 до 00:00</a></li>
-        </ul>
+                        <ul class="menu-contacts">
+                            <li class="list-items"><a class="menu-contacts-items" href="#"><img src="Logo/gps.png"
+                                        alt=""> <span>Адрес: Россия, г.Москва.</span> </a></li>
+                            <li class="list-items"><a class="menu-contacts-items" href="#"><img src="Logo/call.png"
+                                        alt=""> Телефон: +7-999-999-99-99</a></li>
+                            <li class="list-items"><a class="menu-contacts-items" href="#"><img src="Logo/mail.png"
+                                        alt="">Почта: spa_salon@mail.ru</a></li>
+                            <li class="list-items"><a class="menu-contacts-items" href="#"><img src="Logo/instagram.png"
+                                        alt="">Instagram: @spa_salon </a></li>
+                            <li class="list-items"><a class="menu-contacts-items" href="#"><img
+                                        src="Logo/openingHours.png" alt="">Часы работы: ежедневно с 8:00 до 00:00</a>
+                            </li>
+                        </ul>
 
-    </footer>
+                    </footer>
 
                 </div>
             </div>
